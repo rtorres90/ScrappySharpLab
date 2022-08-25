@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vY9thIEQtiT2pA38SAe1Rf46DC4ZmSI8yCjUasWoaKbFn5bNRjTJlh5bKel1bgjgGEuHb+0rNmA26Qt5Eo5+Bw==",
+  "dgSpecHash": "/IjUznK/f8RBMXHgYCc/SX0KjS6Ps7Uq7MxVaHvY+Aa2uHBYQJaKpddZdw2q/L/E/dMPyjzd5jFMOvSM/CNuvQ==",
   "success": true,
   "projectFilePath": "/Users/rtorres/RiderProjects/ScrappySharpLab/ScrappySharpLab/ScrappySharpLab.csproj",
   "expectedPackageFiles": [
+    "/Users/rtorres/.nuget/packages/csvhelper/28.0.1/csvhelper.28.0.1.nupkg.sha512",
     "/Users/rtorres/.nuget/packages/fsharp.core/4.5.2/fsharp.core.4.5.2.nupkg.sha512",
     "/Users/rtorres/.nuget/packages/htmlagilitypack/1.7.4/htmlagilitypack.1.7.4.nupkg.sha512",
     "/Users/rtorres/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",

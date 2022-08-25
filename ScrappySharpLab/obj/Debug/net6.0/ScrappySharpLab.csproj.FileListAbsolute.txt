@@ -38,3 +38,4 @@
 /Users/rtorres/RiderProjects/ScrappySharpLab/ScrappySharpLab/obj/Debug/net6.0/ScrappySharpLab.pdb
 /Users/rtorres/RiderProjects/ScrappySharpLab/ScrappySharpLab/obj/Debug/net6.0/ScrappySharpLab.genruntimeconfig.cache
 /Users/rtorres/RiderProjects/ScrappySharpLab/ScrappySharpLab/obj/Debug/net6.0/ref/ScrappySharpLab.dll
+/Users/rtorres/RiderProjects/ScrappySharpLab/ScrappySharpLab/bin/Debug/net6.0/CsvHelper.dll
