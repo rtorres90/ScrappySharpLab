@@ -2,12 +2,7 @@ namespace ScrappySharpLab.Models;
 
 public class Quote
 {
-    public int? Id;
-    public string? Text;
-    public List<Tag> tags = new List<Tag>();
-
-    public Quote(string text)
-    {
-        this.Text = text;
-    }
+    public int Id { get; set; }
+    public string Text { get; set; }
+    public List<Tag> Tags { get; set; } = new List<Tag>();
 }

@@ -2,11 +2,7 @@ namespace ScrappySharpLab.Models;
 
 public class Tag
 {
-    public int? Id;
-    public string Name;
+    public int Id { get; set; }
+    public string Name { get; set; }
 
-    public Tag(string name)
-    {
-        this.Name = name;
-    }
 }
