@@ -17,24 +17,30 @@ var extractedQuotes = new List<Quote>();
 foreach (var quote in quotes)
 {
     var quoteText = quote.SelectSingleNode(".//span[@class='text']").InnerText;
-    var currentQuote = new Quote {Text = quoteText};
-    List<Tag> tags = quote.CssSelect(".tag").Select(tag => new Tag {Name = tag.InnerText}).ToList();
-    foreach (var tag in tags)
+    Console.WriteLine(quoteText);
+    Quote foundQuote = db.Quotes.FirstOrDefault(q => q.Text == quoteText);
+    if (foundQuote == null)
     {
-        Tag foundTag = db.Tags.FirstOrDefault(t => t.Name == tag.Name);
-        if (foundTag == null)
+        var currentQuote = new Quote {Text = quoteText};
+        List<Tag> tags = quote.CssSelect(".tag").Select(tag => new Tag {Name = tag.InnerText}).ToList();
+        foreach (var tag in tags)
         {
-            foundTag = new Tag();
-            foundTag.Name = tag.Name;
-            db.Tags.Add(foundTag);
-            db.SaveChanges();
-        }
-        currentQuote.Tags.Add(foundTag);
-        
-    }
+            Tag foundTag = db.Tags.FirstOrDefault(t => t.Name == tag.Name);
+            Console.WriteLine(foundTag.Name);
+            if (foundTag == null)
+            {
+                foundTag = new Tag();
+                foundTag.Name = tag.Name;
+                db.Tags.Add(foundTag);
+                db.SaveChanges();
+            }
 
-    extractedQuotes.Add(currentQuote);
-    db.Quotes.Add(currentQuote);
-    Console.WriteLine(currentQuote.Text);
-    db.SaveChanges();
+            currentQuote.Tags.Add(foundTag);
+        }
+
+        extractedQuotes.Add(currentQuote);
+        db.Quotes.Add(currentQuote);
+        Console.WriteLine(currentQuote.Text);
+        db.SaveChanges();
+    }
 }
