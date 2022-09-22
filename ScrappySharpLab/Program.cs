@@ -26,7 +26,6 @@ foreach (var quote in quotes)
         foreach (var tag in tags)
         {
             Tag foundTag = db.Tags.FirstOrDefault(t => t.Name == tag.Name);
-            Console.WriteLine(foundTag.Name);
             if (foundTag == null)
             {
                 foundTag = new Tag();
